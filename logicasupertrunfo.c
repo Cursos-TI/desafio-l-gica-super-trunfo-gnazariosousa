@@ -134,5 +134,93 @@ int main(){
         printf("Resultado: Carta 2(%s) venceu\n", nome2); 
     };
 
+
+    //Escolher um atributo apra comparar as duas cartas
+
+    int opcao;
+
+    printf("Escolha um atributo para comparar as cartas");
+    printf("1. Nome do país\n");
+    printf("2. Populacao\n");
+    printf("3. Área\n");
+    printf("4. PIB\n");
+    printf("5. Número de pontos turísticos\n");
+    printf("6. Densidade Demográfica\n");
+    scanf("%d", &opcao);
+
+    switch (opcao) {
+
+
+
+        case 1:
+        printf("Nome da Carta 1: %s / Nome da Carta 2: %s\n", nome1, nome2);
+        break;
+
+        case 2:
+        if (populacao1 > populacao2) {
+        printf("Resultado da comparacao do atributo Populacao: Carta 1(%lu) venceu\n", populacao1);
+        }
+        else if (populacao1 < populacao2)
+        {
+        printf("Resultado da comparacao do atributo Populacao: Carta 2(%lu) venceu\n", populacao2);
+        }else {
+        printf("Resultado da comparacao do atributo Populacao: Empate!\n"); 
+        }
+        break;
+
+        case 3:
+        if (area1 > area2) {
+        printf("Resultado da comparacao do atributo Area: Carta 1(%.2f) venceu\n", area1);
+        }
+        else if (area1 < area2)
+        {
+        printf("Resultado da comparacao do atributo Area: Carta 2(%.2f) venceu\n", area2);
+        }else {
+        printf("Resultado da comparacao do atributo Area: Empate!\n"); 
+        }
+        break;
+
+        case 4:
+        if (pib1 > pib2) {
+        printf("Resultado da comparacao do atributo PIB: Carta 1(%.2f) venceu\n", pib1);
+        }
+        else if (pib1 < pib2)
+        {
+        printf("Resultado da comparacao do atributo PIB: Carta 2(%.2f) venceu\n", pib2);
+        }else {
+        printf("Resultado da comparacao do atributo PIB: Empate!\n"); 
+        }
+        break;
+
+        case 5:
+        if (pontosturisticos1 > pontosturisticos2) {
+        printf("Resultado da comparacao do atributo Pontos Turisticos: Carta 1(%d) venceu\n", pontosturisticos1);
+        }
+        else if (pontosturisticos1 < pontosturisticos2)
+        {
+        printf("Resultado da comparacao do atributo Pontos Turisticos: Carta 2(%d) venceu\n", pontosturisticos2);
+        }else {
+        printf("Resultado da comparacao do atributo Pontos Turisticos: Empate!\n"); 
+        }
+        break;
+
+        case 6:
+        if (densidade1 < densidade2) {
+        printf("Resultado da comparacao do atributo Densidade Demografica: Carta 1(%.2f) venceu\n", densidade1);
+        }
+        else if (densidade1 > densidade2)
+        {
+        printf("Resultado da comparacao do atributo Densidade Demografica: Carta 2(%.2f) venceu\n", populacao2);
+        }else {
+        printf("Resultado da comparacao do atributo Densidade Demografica: Empate!\n"); 
+        }
+        break;
+
+
+
+
+    }
+    
+
 return 0;
 }
